@@ -33,3 +33,13 @@ function textData($valeur)
     $valeur = preg_match('/^[a-z-A-Z]*$/', $valeur);
     return $valeur;
 }
+
+function getMovieLimit($valeur)
+{
+    global $conn;
+    $sqlRequest = "SELECT * FROM movies_full LIMIT " . $valeur;
+
+    $resultat = $conn->prepare($sqlRequest);
+    $resultat->execute();
+    return $resultat->fetchAll();
+}

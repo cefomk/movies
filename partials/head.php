@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +15,11 @@
         <h1>Movies</h1>
         <nav>
             <ul>
-                <li><a href="./login/">Connexion</a></li>
+                <?php if(($_SESSION['login'])) { ?>
+                        <li><a href="./login/deconnexion.php">Deconnexion</a></li>
+                <?php } else { ?>
+                        <li><a href="./login/">Connexion</a></li>
+                <?php } ?>
             </ul>
         </nav>
     </header>

@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana;
+    font-size: 1rem;
+    color:brown;
+    padding: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,li {
+    list-style-type: none;
+}
+
+.header {
+    display: flex;
+    vertical-align: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}

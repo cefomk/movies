@@ -1,12 +1,15 @@
 <?php
 
-// define('HOST','localhost');
-// $dbName = 'netflix';
-// $useDbName = 'dev';
-// $userDbPassword = 'dev';
+$dsn = 'mysql:host=localhost;dbname=netflix';
+$useDbName = 'root';
+$userDbPassword = '';
 
 try {
-    $conn = new PDO('mysql:host=localhost;dbname=netflix',"dev","dev",[
+    $conn = new PDO(
+        $dsn,
+        $useDbName,
+        $userDbPassword,
+    [
     PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8",
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING
